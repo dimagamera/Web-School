@@ -38,30 +38,30 @@ pipeline  {
                '''
            }
         }
-//        stage("docker stop") {
-//           steps {
-//               echo " ============== stoping all containers =================="
-//               sh '''
-//               docker stop web-school
- //              '''
- //          }
-//        } 
-//        stage("docker remove") {
- //          steps {
-  //             echo " ============== removing all docker containers =================="
- //              sh '''
-  //             docker rm web-school
- //              '''
- //          }
- //       }
-//        stage("docker remove images") {
- //          steps {
- //              echo " ============== removing all docker images =================="
-//               sh '''
- //              docker rmi $(docker images -q)
- //              '''
- //          }
-  //      }
+        stage("docker stop") {
+           steps {
+              echo " ============== stoping all containers =================="
+               sh '''
+               docker stop web-school
+              '''
+          }
+        } 
+        stage("docker remove") {
+          steps {
+             echo " ============== removing all docker containers =================="
+              sh '''
+             docker rm web-school
+              '''
+          }
+       }
+        stage("docker remove images") {
+          steps {
+              echo " ============== removing all docker images =================="
+               sh '''
+              docker rmi $(docker images -q)
+              '''
+          }
+      }
         stage("docker run") {
            steps {
                echo " ============== starting TeleBOT =================="
@@ -71,9 +71,9 @@ pipeline  {
            }
         }
         // stage(" gulp ") {
-        //    steps {
-        //        echo " ============== starting TeleBOT =================="
-        //        sh '''
+         //   steps {
+         //       echo " ============== starting TeleBOT =================="
+         //       sh '''
         //        npm install gulp -g
         //        gulp
         //        '''
