@@ -7,5 +7,4 @@ RUN npm install
 RUN npm install gulp -g
 RUN npm install --no-cache-dir -r package.json
 
-
 CMD [ "gulp" ]
