@@ -38,14 +38,14 @@ pipeline  {
                '''
            }
         }
-        stage("docker stop") {
-           steps {
-               echo " ============== stoping all containers =================="
-               sh '''
-               docker stop web-school
-               '''
-           }
-        } 
+//        stage("docker stop") {
+//           steps {
+//               echo " ============== stoping all containers =================="
+//               sh '''
+//               docker stop web-school
+ //              '''
+ //          }
+//        } 
         stage("docker remove") {
            steps {
                echo " ============== removing all docker containers =================="
